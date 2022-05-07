@@ -38,14 +38,17 @@ const pokémon = Object.freeze([
 // console.log(moreThanOneType)
 
 // // an array with just the names of the pokémon
-const namesOnly = pokémon.map(p => p.name)
-console.log(namesOnly)
-// an array with just the names of pokémon with an id greater than 99
-const name99Id = pokémon.map(p => p.id)
-console.log(name99Id)
-// an array with just the names of the pokémon whose only type is poison
-const onlyPoison = pokémon.map(p => p.types )
-console.log(onlyPoison)
-// an array containing just the first type of all the pokémon whose second type is "flying"
-
+// const namesOnly = pokémon.map(p => p.name)
+// console.log(namesOnly)
+// // an array with just the names of pokémon with an id greater than 99
+// const name99Id = pokémon.filter(p => p.id > 99 )
+// console.log(name99Id)
+// // an array with just the names of the pokémon whose only type is poison
+// const onlyPoison = pokémon.filter(p => p.types =='poison')
+// console.log(onlyPoison)
+// // an array containing just the first type of all the pokémon whose second type is "flying"
+// const secondTypeFlying = pokémon.filter(p => p.types[1]=='flying').map(p => p.types[0])
+// console.log(secondTypeFlying)
 // a count of the number of pokémon that are "normal" type
+const countOfNormal = pokémon.filter(p => p.types == 'normal').map(p => p.types)
+console.log(countOfNormal)
