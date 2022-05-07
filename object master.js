@@ -26,24 +26,26 @@ const pokémon = Object.freeze([
     
 // an array of pokémon objects where the id is evenly divisible by 3
 
-const div3 = pokémon.filter(poke => poke.id % 3 === 0)
-console.log(div3)
+// const div3 = pokémon.filter(poke => poke.id % 3 === 0)
+// console.log(div3)
 
-// an array of pokémon objects that are "fire" type
-const firetype = pokémon.filter(poke => poke.types.includes('fire'))
-console.log(firetype)
+// // an array of pokémon objects that are "fire" type
+// const firetype = pokémon.filter(poke => poke.types.includes('fire'))
+// console.log(firetype)
 
-// an array of pokémon objects that have more than one type
-const moreThanOneType = pokémon.filter(p => p.types.length > 1)
-console.log(moreThanOneType)
+// // an array of pokémon objects that have more than one type
+// const moreThanOneType = pokémon.filter(p => p.types.length > 1)
+// console.log(moreThanOneType)
 
-// an array with just the names of the pokémon
-const namesOnly = pokémon.filter(p => p.name)
+// // an array with just the names of the pokémon
+const namesOnly = pokémon.map(p => p.name)
 console.log(namesOnly)
 // an array with just the names of pokémon with an id greater than 99
-const name99Id = pokémon.filter(p => p.id)
+const name99Id = pokémon.map(p => p.id)
+console.log(name99Id)
 // an array with just the names of the pokémon whose only type is poison
-
+const onlyPoison = pokémon.map(p => p.types )
+console.log(onlyPoison)
 // an array containing just the first type of all the pokémon whose second type is "flying"
 
 // a count of the number of pokémon that are "normal" type
